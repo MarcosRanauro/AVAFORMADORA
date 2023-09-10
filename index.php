@@ -42,16 +42,24 @@
   <div class="container container02">
     <div class="img column">
       <form class="col s12">
-      <img src="./src/images/aluno.jpeg" alt="foto-aluno">
+        <img src="./src/images/aluno.jpeg" alt="foto-aluno">
     </div>
     <div class="infos">
-      <h1>Aluno: <span class="orange-text text-darken-3">Marcos Vinicius Ranauro Corrêa</span></h1>
-      <h2>Matrícula: <span class="orange-text text-darken-3">23103576</span></h2>
-      <h3>Curso: <span class="orange-text text-darken-3">Análise e Desenvolvimento de Sistemas</span></h3>
-      <h4>Período: <span class="orange-text text-darken-3">2º</span></h4>
+      <h1>Aluno: <span class="indigo-text text-darken-4">Marcos Vinicius Ranauro Corrêa</span></h1>
+      <h2>Matrícula: <span class="indigo-text text-darken-4">23103576</span></h2>
+      <h3>Curso: <span class="indigo-text text-darken-4">Análise e Desenvolvimento de Sistemas</span></h3>
+      <h4>Período: <span class="indigo-text text-darken-4">2º</span></h4>
       </form>
     </div>
   </div>
+  <footer class="">
+    <div class="footer">
+      <a href="#!" class="brand-logo center logo">
+        <img src="./src/images/logo-unisuam.png" alt="Logo-unisuam">
+      </a>
+      <p class="brand-logo center logo">Graduação © 2023</p>
+    </div>
+  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./src/js/index.js"></script>
 </body>
