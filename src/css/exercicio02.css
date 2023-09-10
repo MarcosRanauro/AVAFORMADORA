@@ -1,0 +1,36 @@
+/* Estilos para telas maiores ou iguais a 768px */
+div.con-exe2 input[type="submit"] {
+  margin-right: 154px;
+}
+
+.container02 {
+  display: flex;
+  flex-direction: row;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: auto;
+  max-width: 100%; /* Adicione esta linha para definir a largura máxima */
+  box-sizing: border-box; /* Adicione esta linha para incluir padding na largura total */
+}
+
+.falha {
+  margin-left: 260px;
+}
+
+/* Estilos para telas menores que 768px */
+@media (max-width: 767px) {
+  .container02 {
+      background-color: #fff;
+      padding: 10px;
+  }
+
+  /* Estilos adicionais específicos para telas menores */
+  h1 {
+      font-size: 24px;
+      word-wrap: break-word;
+  }
+
+  .voltar.enviar {
+      font-size: 16px;
+  }
+}
