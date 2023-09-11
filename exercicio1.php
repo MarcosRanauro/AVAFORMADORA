@@ -78,6 +78,14 @@
     }
     ?>
   </div>
+  <footer class="white">
+    <div class="footer">
+      <a href="#!" class="brand-logo center logo">
+        <img src="./src/images/logo-unisuam.png" alt="Logo-unisuam">
+      </a>
+      <p class="brand-logo center logo">Graduação © 2023</p>
+    </div>
+  </footer>
   <script src="./src/js/exercicio1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./src/js/index.js"></script>

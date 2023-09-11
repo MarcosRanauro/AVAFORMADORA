@@ -43,3 +43,21 @@
   margin: 0 10px;
   white-space: nowrap;
 }
+
+/* Estilos para telas menores que 768px */
+@media (max-width: 767px) {
+  .container02 {
+      background-color: #fff;
+      padding: 10px;
+  }
+
+  /* Estilos adicionais específicos para telas menores */
+  h1 {
+      font-size: 5vw; /* Ajuste o tamanho da fonte em relação à largura da tela */
+      word-wrap: break-word; /* Permita a quebra de palavras */
+  }
+
+  .voltar.enviar {
+      font-size: 3vw; /* Ajuste o tamanho da fonte em relação à largura da tela */
+  }
+}
