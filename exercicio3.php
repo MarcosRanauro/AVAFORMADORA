@@ -40,19 +40,46 @@
     </div>
   </header>
   <div class="container">
-    <h1>Exercício 02</h1>
+    <h1>Exercício 03</h1>
     <h2>Formulário PHP</h2>
     <div class="row">
-      <form class="col s12" method="post" action="./src/php/validacao02.php">
+    <form class="col s12" method="post" action="./src/components/resultados03.php">
         <div class="con-exe2">
-          <label for="nome">Login:</label>
-          <input type="text" name="nome" id="nome" required><br>
-          <label for="password">Senha:</label>
-          <input type="password" name="password" id="password" required><br>
-          <input class="voltar enviar orange darken-3" type="submit" value="Enviar">
+          <label for="massa">Massa:</label>
+          <input type="number" name="massa" id="massa" required><br>
+          <label for="volume">Volume:</label>
+          <input type="number" name="volume" id="volume" required><br>
+          <input class="enviar voltar orange darken-3" type="submit" name="calcular" value="Calcular">
         </div>
       </form>
     </div>
+    <?php
+    if (isset($_POST["calcular"])) {
+      $massa = $_POST["massa"];
+      $volume = $_POST["volume"];
+
+      $errors = [];
+
+      if ($massa <= 0 || $volume <= 0) {
+        $errors[] = "O campo Massa e Volume devem ser maiores que zero.";
+      }
+
+      if ($massa < 0 || $volume < 0) {
+        $errors[] = "O campo Massa e Volume devem ser números positivos.";
+      }
+
+      if (empty($errors)) {
+        // Redireciona para resultados03.php se não houver erros
+        header("Location: resultados03.php?massa=$massa&volume=$volume");
+        exit;
+      } else {
+        // Exibe os erros na página exercicio3.php
+        foreach ($errors as $error) {
+          echo "<p>$error</p>";
+        }
+      }
+    }
+    ?>
     <?php
     echo '<a class="voltar orange darken-3" type="submit" href="index.php">Voltar</a>';
     ?>
@@ -67,6 +94,7 @@
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./src/js/index.js"></script>
+  <script src="./src/js/exercicio1.js"></script>
 </body>
 
 </html>

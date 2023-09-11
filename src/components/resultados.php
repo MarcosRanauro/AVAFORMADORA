@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sucesso</title>
+  <title>Resultados</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -43,13 +43,22 @@
     <div class="row">
       <form class="col s12">
         <?php
-        // Verifique se o nome de usuário foi passado como parâmetro
-        if (isset($_GET["nome_usuario"])) {
-          $nome_usuario = $_GET["nome_usuario"];
-          echo "<h1>Usuário Autenticado com Sucesso. Bem vindo $nome_usuario!</h1>";
+        session_start();
+
+        // Verifique se há resultados armazenados na sessão
+        if (isset($_SESSION['resultados'])) {
+          $resultados = $_SESSION['resultados'];
+
+          // Exiba os resultados
+          echo "<h1>Resultados:</h1>";
+          echo $resultados;
+
+          // Limpe os resultados da sessão (opcional)
+          unset($_SESSION['resultados']);
         }
+        echo '<a class="voltar orange darken-3" type="submit" href="../../index.php">Voltar</a>';
         ?>
-        <a href="../../index.php" class="voltar enviar">Voltar</a>
+
       </form>
     </div>
   </div>

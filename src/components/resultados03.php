@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sucesso</title>
+  <title>Falha</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -42,14 +42,25 @@
   <div class="container container02">
     <div class="row">
       <form class="col s12">
-        <?php
-        // Verifique se o nome de usuário foi passado como parâmetro
-        if (isset($_GET["nome_usuario"])) {
-          $nome_usuario = $_GET["nome_usuario"];
-          echo "<h1>Usuário Autenticado com Sucesso. Bem vindo $nome_usuario!</h1>";
-        }
-        ?>
-        <a href="../../index.php" class="voltar enviar">Voltar</a>
+      <?php
+    if (isset($_POST["massa"]) && isset($_POST["volume"])) {
+      $massa = $_POST["massa"];
+      $volume = $_POST["volume"];
+
+      if ($massa <= 0 || $volume <= 0) {
+        echo "<p>O campo Massa e Volume devem ser maiores que zero.</p>";
+      } elseif ($massa < 0 || $volume < 0) {
+        echo "<p>O campo Massa e Volume devem ser números positivos.</p>";
+      } else {
+        $resultado = $massa / $volume;
+        $resultado_formatado = number_format($resultado, 1, ",", ".");
+        echo "<p>O valor da Densidade é: $resultado_formatado</p>";
+      }
+    } else {
+      echo "<p>Por favor, preencha o formulário corretamente.</p>";
+    }
+    echo '<a class="voltar orange darken-3" href="../../index.php">Voltar</a>';
+    ?>
       </form>
     </div>
   </div>

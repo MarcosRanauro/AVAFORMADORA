@@ -41,18 +41,18 @@
   </header>
   <div class="container container02">
     <div class="img column">
-      <form class="col s12">
-        <img src="./src/images/aluno.jpeg" alt="foto-aluno">
+      <img src="./src/images/aluno.jpeg" alt="foto-aluno">
     </div>
-    <div class="infos">
-      <h1>Aluno: <span class="indigo-text text-darken-4">Marcos Vinicius Ranauro Corrêa</span></h1>
-      <h2>Matrícula: <span class="indigo-text text-darken-4">23103576</span></h2>
-      <h3>Curso: <span class="indigo-text text-darken-4">Análise e Desenvolvimento de Sistemas</span></h3>
-      <h4>Período: <span class="indigo-text text-darken-4">2º</span></h4>
-      </form>
-    </div>
+    <form class="col s12">
+      <div class="infos">
+        <h1>Aluno: <span class="indigo-text text-darken-4">Marcos Vinicius Ranauro Corrêa</span></h1>
+        <h2>Matrícula: <span class="indigo-text text-darken-4">23103576</span></h2>
+        <h3>Curso: <span class="indigo-text text-darken-4">Análise e Desenvolvimento de Sistemas</span></h3>
+        <h4>Período: <span class="indigo-text text-darken-4">2º</span></h4>
+    </form>
   </div>
-  <footer class="">
+  </div>
+  <footer class="white">
     <div class="footer">
       <a href="#!" class="brand-logo center logo">
         <img src="./src/images/logo-unisuam.png" alt="Logo-unisuam">

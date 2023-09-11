@@ -78,7 +78,7 @@
     }
     ?>
   </div>
-  <footer class="">
+  <footer class="white">
     <div class="footer">
       <a href="#!" class="brand-logo center logo">
         <img src="./src/images/logo-unisuam.png" alt="Logo-unisuam">
